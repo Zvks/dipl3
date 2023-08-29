@@ -1,0 +1,39 @@
+# 0 Настройка git
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+Настройка библиотек ubuntu
+- cudann
+
+
+# 1 Cоздание виртуальной среды virtualenvwrapper
+Установка 
+sudo pip3 install virtualenvwrapper
+#Virtualenvwrapper settings:
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.11
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
+
+плагин к vsc
+Python Environment Manager
+
+команды
+lsvirtualenv
+mkvirtualenv dipl
+
+
+# 2 Настройка сборщика 
+-- потерял скрипт 
+
+# 3 Библиотеки
+kivy
+tensorflow
+numpy
+keras
+matplotlib
+
+sudo apt install hardinfo 
+commit 6.07.23
+новая папка prct
+тест
