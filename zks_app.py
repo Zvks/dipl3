@@ -175,18 +175,18 @@ class App_defect_detection(TabbedPanel):
             data_img = get_img(path_to_img)
             x_test = get_num(data_img)
             defect = model.predict(x_test)
-            n = 0
+            
             for i in defect:
-            #print(i)
+                n = 0
+                #print(i)
                 for j in i:
                     ans = defect_class[n][0] + ' = ' + str(j)
                     #print(ans)
-                    finish_list.append(ans)
+                    finish_list.append(ans)        
                     if j == max(i):
-                        #short_finish_list += str(ans + ' ' + defect_class[n][1] +'\n' + '\n')
-                        short_finish_list += str(defect_class[n][1]  +'\n' + '\n')
-                        n += 1
-            print(short_finish_list)   
+                        short_finish_list += str(ans + ' ' + defect_class[n][1] +'\n')
+                    #print(n)
+                    n += 1     
             self.ids.MyText.text = short_finish_list
         except Exception:
             print('Ошибка')

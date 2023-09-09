@@ -77,16 +77,18 @@ try:
     data_img = get_img(path_to_img)
     x_test = get_num(data_img)
     defect = model.predict(x_test)
+    
     for i in defect:
-        #print(i)
         n = 0
+        print(i)
         for j in i:
             ans = defect_class[n][0] + ' = ' + str(j)
             #print(ans)
             finish_list.append(ans)        
             if j == max(i):
                 short_finish_list += str(ans + ' ' + defect_class[n][1] +'\n')
-                n += 1
+            print(n)
+            n += 1     
     print(short_finish_list)      
 except Exception:
     print('Ошибка')
